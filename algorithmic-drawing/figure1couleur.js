@@ -3,9 +3,9 @@ let Yrsl = 480;//initialisation ordonées
 
 function setup() {
   createCanvas(Xrsl, Yrsl);//initialisation du rectangle
-  background(60,120,60);//fond blanc
+  background(60,120,60);//fond vert foncé
   noFill();//formes non remplies
-  stroke(0,80,0);//couleur noir 
+  stroke(0,80,0);//couleur vert plus clair 
 
   let N = 0;//position du coin supérieur gauche du rectangle
   let X = Xrsl;//abcisse
