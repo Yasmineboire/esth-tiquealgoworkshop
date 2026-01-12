@@ -1,11 +1,15 @@
-réecriture figure 5
-1) problème rencontré
-la carré etait desinner a 45degres trop haut donc j'ai du tpurner la carrer de base pour avoir la figure droite.
+Réecriture figure 5
+1) Description :
+Ce projet crée une animation de carrés imbriqués avec un effet spirale.
+Chaque carré est légèrement réduit et tourné pour donner l’impression d’une spirale qui se resserre vers le centre.
 
-
-
-
-
+2) Procesus :
+La zone de dessin fait 600×600 pixels.
+J'ai commencer par tracer des carrés au centre de la zone, avec une rotation initiale de 45°.
+À chaque itération :
+-Le carré est dessiné avec ses 4 côtés.
+-Sa taille diminue progressivement.
+-L’angle de rotation diminue légèrement (angle -= 0.05) pour créer la spirale.
 
 Projet Chou Romanesco
 
