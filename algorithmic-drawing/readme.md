@@ -1,3 +1,5 @@
+Tous les codes sont écrits en JavaScript et peuvent être ouverts et exécutés directement sur p5.js en ligne.
+
 Réecriture figure 1 couleur :
 1) Ce projet crée une série de rectangles imbriqués avec des contours de plus en plus épais. Le fond est vert foncé et les rectangles sont tracés en vert clair, sans remplissage.
 2) Procesus :
