@@ -1,16 +1,16 @@
 // Définition des constantes de la grille
 const COLONNES = 90; // nombre de colonnes de la grille
-const LIGNES = 90; // nombre de lignes de la grille
+const LIGNES = 90;   // nombre de lignes de la grille
 const TAILLE_CASE = 7; // taille d’un carré affiché à l’écran en pixels
 
 // Définition des types de cellules
-const VIDE = 0; // case vide
+const VIDE = 0;         // case vide
 const PROGENITRICE = 1; // cellule progénitrice
-const MIGRANTE = 2; // cellule migrante
-const NEURONE = 3; // neurone
+const MIGRANTE = 2;     // cellule migrante
+const NEURONE = 3;      // neurone
 
 // Création des buffers pour stocker l'état actuel et futur de la grille
-let grille = []; // grille actuelle
+let grille = [];        // grille actuelle
 let prochaineGrille = []; // grille de l’état suivant
 
 // Fonction setup() exécutée au démarrage
@@ -25,7 +25,7 @@ function setup() {
     prochaineGrille[y] = []; // crée un tableau vide pour la ligne y dans la grille suivante
     for (let x = 0; x < COLONNES; x++) { // parcourt toutes les colonnes
       // 40% de chances de créer une cellule progénitrice, sinon case vide
-      grille[y][x] = random() < 0.4 ? creerCellule(PROGENITRICE) : creerCellule(VIDE);
+      grille[y][x] = random() < 0.001 ? creerCellule(PROGENITRICE) : creerCellule(VIDE);
       prochaineGrille[y][x] = creerCellule(VIDE); // initialise la grille suivante à vide
     }
   }
@@ -34,10 +34,10 @@ function setup() {
 // Fonction pour créer une cellule avec ses propriétés
 function creerCellule(type) {
   return {
-    type: type, // type de cellule (VIDE, PROGENITRICE, MIGRANTE, NEURONE)
-    energie: random(0.4, 1), // énergie initiale aléatoire entre 0.4 et 1
-    activite: 0, // activité neuronale initiale
-    age: 0 // âge de la cellule
+    type: type,                 // type de cellule (VIDE, PROGENITRICE, MIGRANTE, NEURONE)
+    energie: random(0.4, 1),    // énergie initiale aléatoire entre 0.4 et 1
+    activite: 0,                // activité neuronale initiale
+    age: 0                      // âge de la cellule
   };
 }
 
@@ -76,7 +76,7 @@ function etape() {
       // Comportement des cellules progénitrices
       if (cellule.type === PROGENITRICE) {
         // reproduction aléatoire si l’énergie est suffisante
-        if (cellule.energie > 0.7 && random() < 0.05)
+        if (cellule.energie > 0.6 && random() < 0.05)
           reproduire(x, y, PROGENITRICE);
 
         // transformation en cellule migrante après un certain âge
@@ -122,7 +122,7 @@ function etape() {
         if (voisinsNeurones === 2 || voisinsNeurones === 3)
           reproduire(x, y, NEURONE);
 
-        // mort d'une cellule si trop peu ou trop de voisins ou énergie faible
+        // apoptose si trop peu ou trop de voisins ou énergie faible
         if (voisinsNeurones < 2 || voisinsNeurones > 4 || cellule.energie < 0.05)
           cellule = creerCellule(VIDE);
 
@@ -203,4 +203,3 @@ function dessinerLegende() {
   fill(10); rect(x,y+160,s,s); fill(255);
   text("Vide", x+30, y+175);
 }
-
