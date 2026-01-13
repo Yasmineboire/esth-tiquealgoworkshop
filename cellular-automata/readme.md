@@ -12,4 +12,4 @@ Les couleurs aident à visualiser l’état des cellules : vert pour les progén
 
 IV. Les problèmes recontrés
 
-Lors du développement, j’ai rencontré deux défis principaux : ralentir la génération trop rapide de cellules pour rendre la simulation lisible, et trouver un équilibre d’échelle entre le nombre de cases et la performance de l’affichage. Ces ajustements ont permis de créer une simulation plus réaliste et pédagogique, tout en restant visuellement dynamique.
+Lors du développement, j’ai rencontré deux défis principaux : ralentir la génération trop rapide de cellules pour rendre la simulation lisible, et trouver un équilibre d’échelle entre le nombre de cases et la performance de l’affichage. Ces ajustements ont permis de créer une simulation plus réaliste, tout en restant visuellement dynamique.
