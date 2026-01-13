@@ -1,16 +1,16 @@
 // Définition des constantes de la grille
 const COLONNES = 90; // nombre de colonnes de la grille
-const LIGNES = 90;   // nombre de lignes de la grille
+const LIGNES = 90; // nombre de lignes de la grille
 const TAILLE_CASE = 7; // taille d’un carré affiché à l’écran en pixels
 
 // Définition des types de cellules
-const VIDE = 0;         // case vide
+const VIDE = 0; // case vide
 const PROGENITRICE = 1; // cellule progénitrice
-const MIGRANTE = 2;     // cellule migrante
-const NEURONE = 3;      // neurone
+const MIGRANTE = 2; // cellule migrante
+const NEURONE = 3; // neurone
 
 // Création des buffers pour stocker l'état actuel et futur de la grille
-let grille = [];        // grille actuelle
+let grille = []; // grille actuelle
 let prochaineGrille = []; // grille de l’état suivant
 
 // Fonction setup() exécutée au démarrage
@@ -34,10 +34,10 @@ function setup() {
 // Fonction pour créer une cellule avec ses propriétés
 function creerCellule(type) {
   return {
-    type: type,                 // type de cellule (VIDE, PROGENITRICE, MIGRANTE, NEURONE)
-    energie: random(0.4, 1),    // énergie initiale aléatoire entre 0.4 et 1
-    activite: 0,                // activité neuronale initiale
-    age: 0                      // âge de la cellule
+    type: type, // type de cellule (VIDE, PROGENITRICE, MIGRANTE, NEURONE)
+    energie: random(0.4, 1), // énergie initiale aléatoire entre 0.4 et 1
+    activite: 0, // activité neuronale initiale
+    age: 0 // âge de la cellule
   };
 }
 
