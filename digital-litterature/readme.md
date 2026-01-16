@@ -20,3 +20,7 @@ Pistes d’améliorations :
   -Ajouter une histoire plus développée avec des dialogues.
   -Mettre en place un système de score.
   -Ajouter une carte ASCII pour visualiser les lieux.
+
+Après améliorations :
+Le jeu ne se déroule plus dans le terminal mais sur une page interactive réalisée avec p5.js. Une première page contient un bouton Start permettant de lancer la partie. Sur la deuxième page, le joueur peut faire ses choix et dispose de 4 tours pour réussir. À la fin de chaque tour, des indices sont fournis afin de l’aider à trouver la bonne combinaison. Pour l'améliorer encore plus je pourrait créer une map et des personnages...
+
